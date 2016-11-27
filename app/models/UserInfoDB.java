@@ -1,7 +1,7 @@
 package models;
 
-import org.mindrot.jbcrypt.BCrypt;
-
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -21,7 +21,16 @@ public class UserInfoDB {
    * @param password Their password. 
    */
   public static void addUserInfo(String name, String email, String password) {
-    userinfos.put(email, new UserInfo(name, email, BCrypt.hashpw(password, BCrypt.gensalt())));
+    try
+    {
+      userinfos.put(email, new UserInfo(name, email, PasswordHash.createHash(password)));
+    } catch (NoSuchAlgorithmException e)
+    {
+      e.printStackTrace();
+    } catch (InvalidKeySpecException e)
+    {
+      e.printStackTrace();
+    }
   }
   
   /**
@@ -48,12 +57,23 @@ public class UserInfoDB {
    * @return True if email is a valid user email and password is valid for that email.
    */
   public static boolean isValid(String email, String password) {
-    return ((email != null) 
-            &&
-            (password != null) 
-            &&
-            isUser(email)
-            &&
-            BCrypt.checkpw(password, getUser(email).getPassword()));
+      try
+      {
+          return ((email != null)
+                  &&
+                  (password != null)
+                  &&
+                  isUser(email)
+                  &&
+                  PasswordHash.validatePassword(password, getUser(email).getPassword()));
+      } catch (NoSuchAlgorithmException e)
+      {
+          e.printStackTrace();
+      } catch (InvalidKeySpecException e)
+      {
+          e.printStackTrace();
+      }
+
+      return false;
   }
 }
