@@ -11,9 +11,9 @@ import java.util.Map;
  * @author Philip Johnson
  */
 public class UserInfoDB {
-  
+
   private static Map<String, UserInfo> userinfos = new HashMap<String, UserInfo>();
-  
+
   /**
    * Adds the specified user to the UserInfoDB.
    * @param name Their name.

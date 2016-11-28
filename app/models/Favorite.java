@@ -11,27 +11,19 @@ import javax.persistence.Id;
 @Entity
 public class Favorite extends Model
 {
-    @EmbeddedId
-    /**
-     * Composite primary key
-     */
-    private FavoriteKey key;
+    @Id
+    private String key;
 
-    @Embeddable
-    public class FavoriteKey {
+    private String cookie;
 
-        public String cookie;
-        public Integer id;
+    private Integer couponid;
 
-        public FavoriteKey(String cookie, Integer id)
-        {
-            this.cookie = cookie;
-            this.id = id;
-        }
-    }
 
     public Favorite(String cookie, Integer couponId)
     {
-        key = new FavoriteKey(cookie, couponId);
+        // a composite key should be used (using @EmbeddedId) but we'll use this for now as a dirty fix
+        key = cookie + "_" + couponId;
+        this.cookie = cookie;
+        this.couponid = couponId;
     }
 }
