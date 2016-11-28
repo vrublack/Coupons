@@ -11,27 +11,26 @@ import javax.persistence.Lob;
 public class Business extends Model
 {
     @Id
-    private String businessId;
+    private String bemail;
 
-    private String name;
+    private String bname;
 
-    private String description;
+    private String bdescription;
 
-    private String categoryId;
+    private Integer catid;
 
-    @Lob
-    private byte[] image;
+    /**
+     * Hashed password (using PasswordHash class)
+     */
+    private String password;
 
-    private String passwordHash;
 
-
-    public Business(String businessId, String name, String description, String categoryId, byte[] image, String passwordHash)
+    public Business(String businessId, String name, String description, Integer categoryId, String passwordHash)
     {
-        this.businessId = businessId;
-        this.name = name;
-        this.description = description;
-        this.categoryId = categoryId;
-        this.image = image;
-        this.passwordHash = passwordHash;
+        this.bemail = businessId;
+        this.bname = name;
+        this.bdescription = description;
+        this.catid = categoryId;
+        this.password = passwordHash;
     }
 }

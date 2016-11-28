@@ -10,17 +10,17 @@ import javax.persistence.Id;
 public class Category extends Model
 {
     @Id
-    private String categoryId;
+    private Integer catid;
 
-    private String name;
+    private String cname;
 
-    private String description;
+    private String cdescription;
 
 
-    public Category(String categoryId, String name, String description)
+    public Category(Integer categoryId, String name, String description)
     {
-        this.categoryId = categoryId;
-        this.name = name;
-        this.description = description;
+        this.catid = categoryId;
+        this.cname = name;
+        this.cdescription = description;
     }
 }
