@@ -32,8 +32,10 @@ public class Application extends Controller {
     String city = ipLocation.getCityName(request().remoteAddress());
     System.out.println("Request from city: " + city);
 
-    String userToken = request().cookies().get("user_token").value();
-    System.out.println("Request from user with token: " + userToken);
+    if (request().cookies().get("user_token") != null) {
+      String userToken = request().cookies().get("user_token").value();
+      System.out.println("Request from user with token: " + userToken);
+    }
 
     return ok(Index.render("Home", Secured.isLoggedIn(ctx()), Secured.getUserInfo(ctx())));
   }
