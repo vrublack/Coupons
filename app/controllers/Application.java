@@ -1,5 +1,6 @@
 package controllers;
 
+import models.IPLocation;
 import play.data.Form;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -9,16 +10,28 @@ import views.html.Index;
 import views.html.Login;
 import views.html.Profile;
 
+import java.io.IOException;
+
 /**
  * Implements the controllers for this application.
  */
 public class Application extends Controller {
+
+  private IPLocation ipLocation = new IPLocation();
+
+  public Application() throws IOException
+  {
+  }
 
   /**
    * Provides the Index page.
    * @return The Index page.
    */
   public Result index() {
+
+    String city = ipLocation.getCityName(request().remoteAddress());
+    System.out.println("Request from city: " + city);
+
     return ok(Index.render("Home", Secured.isLoggedIn(ctx()), Secured.getUserInfo(ctx())));
   }
   
