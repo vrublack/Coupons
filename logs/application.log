@@ -1,6 +1,6 @@
-2016-11-30 13:07:35,019 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-30 13:07:35,435 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2016-11-30 13:07:36,599 [ERROR] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
+2016-11-30 14:00:00,957 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-30 14:00:01,364 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 14:00:03,610 [ERROR] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
 throws exception: org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
 select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-192]
 org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
@@ -87,10 +87,10 @@ select id, hash, apply_script, revert_script, state, last_problem from play_evol
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1689)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1644)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2016-11-30 13:07:36,995 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T18:07:36.987Z
-2016-11-30 13:07:37,116 [ERROR] from application in netty-event-loop-3 - 
+2016-11-30 14:00:03,947 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T19:00:03.941Z
+2016-11-30 14:00:04,505 [ERROR] from application in netty-event-loop-3 - 
 
-! @728h67egp - Internal server error, for (GET) [/] ->
+! @728hd4g2n - Internal server error, for (GET) [/] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$play$api$db$evolutions$ApplicationEvolutions$$runEvolutions$1.apply$mcV$sp(ApplicationEvolutions.scala:77)
@@ -143,9 +143,9 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1689)
 	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1644)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2016-11-30 13:07:43,466 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Stopping application at 2016-11-30T18:07:43.466Z after 7s.
-2016-11-30 13:07:43,473 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
-2016-11-30 13:07:43,698 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-30 13:07:43,708 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2016-11-30 13:07:43,825 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T18:07:43.825Z
-2016-11-30 13:07:44,084 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-30 14:00:10,308 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Stopping application at 2016-11-30T19:00:10.308Z after 7s.
+2016-11-30 14:00:10,317 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
+2016-11-30 14:00:10,504 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-30 14:00:10,509 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 14:00:10,601 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T19:00:10.601Z
+2016-11-30 14:00:10,922 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
