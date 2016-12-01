@@ -18,12 +18,15 @@ public class Favorite extends Model
 
     private Integer couponid;
 
+    private String timestamp;
 
-    public Favorite(String cookie, Integer couponId)
+
+    public Favorite(String cookie, Integer couponId, String timestamp)
     {
         // a composite key should be used (using @EmbeddedId) but we'll use this for now as a dirty fix
         key = cookie + "_" + couponId;
         this.cookie = cookie;
         this.couponid = couponId;
+        this.timestamp = timestamp;
     }
 }
