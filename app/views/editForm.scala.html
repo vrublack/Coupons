@@ -1,0 +1,33 @@
+@(id: Long, couponForm: Form[Coupon])
+
+@import helper._
+
+@import b3.vertical.fieldConstructor  // Declares a vertical field constructor as default
+
+@main {
+
+<h1>Edit coupon</h1>
+
+@b3.form(routes.HomeController.update(id)) {
+
+<fieldset>
+    @b3.text(couponForm("name"), '_label -> "Coupon name", '_help -> "")
+    @b3.text(couponForm("description"), '_label -> "Description", '_help -> "")
+    @b3.text(couponForm("promocode"), '_label -> "Promocode", '_help -> "")
+    @b3.number(couponForm("discountRate"), '_label -> "Discount rate", '_help -> "")
+    @b3.text(couponForm("expirationDate"), '_label -> "Expiration date", '_help -> "")
+    @b3.text(couponForm("bemail"), '_label -> "Business email", '_help -> "")
+</fieldset>
+
+<div class="actions">
+    <input type="submit" value="Save this coupon" class="btn primary"> or
+    <a href="@routes.HomeController.list()" class="btn">Cancel</a>
+</div>
+
+}
+
+@b3.form(routes.HomeController.delete(id), 'class -> "topRight") {
+<input type="submit" value="Delete this coupon" class="btn danger">
+}
+
+}

@@ -1,0 +1,8 @@
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/application.conf,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/application.conf)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/evolutions,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/evolutions)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/logback.xml,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/messages,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/messages)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/routes,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/routes)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/evolutions/default,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/evolutions/default)[0m
+[0m[[0mdebug[0m] [0m	(/Users/johnrock/Desktop/Coupons/conf/evolutions/default/1.sql,/Users/johnrock/Desktop/Coupons/target/scala-2.11/classes/evolutions/default/1.sql)[0m
