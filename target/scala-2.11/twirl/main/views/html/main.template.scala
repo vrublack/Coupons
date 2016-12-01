@@ -75,8 +75,8 @@ Seq[Any](format.raw/*1.17*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 30 22:13:29 EST 2016
-                  SOURCE: /Users/johnrock/Desktop/Coupons/app/views/main.scala.html
+                  DATE: Thu Dec 01 00:30:29 EST 2016
+                  SOURCE: /Users/Valentin/git/Coupon/Coupon/app/views/main.scala.html
                   HASH: 8943dcf6300fb2d5cec31f6046b605ec30a6d103
                   MATRIX: 741->1|851->16|879->18|977->563|1009->568|1097->629|1112->635|1177->678|1257->731|1272->737|1327->771|1438->855|1453->861|1497->884|1613->974|1641->981|1669->982
                   LINES: 27->1|32->1|34->3|38->13|39->14|39->14|39->14|39->14|41->16|41->16|41->16|47->22|47->22|47->22|54->29|54->29|55->30

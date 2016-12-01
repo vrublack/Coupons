@@ -20,11 +20,29 @@ public class Business extends Model
      */
     private String password;
 
+    public static Finder<Integer, Business> find
+            = new Model.Finder<>(Integer.class, Business.class);
+
 
     public Business(String email, String name, String passwordHash)
     {
         this.bemail = email;
         this.bname = name;
         this.password = passwordHash;
+    }
+
+    public String getBemail()
+    {
+        return bemail;
+    }
+
+    public String getBname()
+    {
+        return bname;
+    }
+
+    public String getPassword()
+    {
+        return password;
     }
 }

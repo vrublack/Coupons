@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/Valentin/git/Coupon/Coupon/conf/routes
-// @DATE:Wed Nov 30 21:05:42 EST 2016
+// @DATE:Thu Dec 01 00:30:28 EST 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -15,7 +15,87 @@ import _root_.play.libs.F
 package controllers.javascript {
   import ReverseRouteContext.empty
 
-  // @LINE:16
+  // @LINE:7
+  class ReverseHomeController(_prefix: => String) {
+
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:31
+    def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.delete",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0) + "/delete"})
+        }
+      """
+    )
+  
+    // @LINE:23
+    def create: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.create",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons/new"})
+        }
+      """
+    )
+  
+    // @LINE:27
+    def edit: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.edit",
+      """
+        function(id0) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:28
+    def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.update",
+      """
+        function(id0) {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id0)})
+        }
+      """
+    )
+  
+    // @LINE:20
+    def list: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.list",
+      """
+        function(p0,s1,o2,f3) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons" + _qS([(p0 == null ? null : (""" + implicitly[QueryStringBindable[Int]].javascriptUnbind + """)("p", p0)), (s1 == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("s", s1)), (o2 == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("o", o2)), (f3 == null ? null : (""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("f", f3))])})
+        }
+      """
+    )
+  
+    // @LINE:24
+    def save: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.save",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "coupons"})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
+  }
+
+  // @LINE:17
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -23,7 +103,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:16
+    // @LINE:17
     def at: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.at",
       """
@@ -43,7 +123,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:12
+    // @LINE:13
     def businessSignup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.businessSignup",
       """
@@ -53,7 +133,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:9
+    // @LINE:10
     def profile: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.profile",
       """
@@ -63,7 +143,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
+    // @LINE:11
     def logout: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.logout",
       """
@@ -83,7 +163,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:8
+    // @LINE:9
     def postLogin: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.postLogin",
       """
@@ -93,7 +173,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:13
+    // @LINE:14
     def postBusinessSignup: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.postBusinessSignup",
       """
@@ -103,7 +183,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:7
+    // @LINE:8
     def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Application.login",
       """

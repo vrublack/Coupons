@@ -4,7 +4,7 @@
 		module="coupon_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20161115174205"
+		publication="20161201003010"
 	>
 		<description>
 		Coupon
@@ -32,8 +32,8 @@
 		<artifact name="coupon_2.11" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 	</publications>
 	<dependencies>
-		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" conf="scala-tool->default,optional(default)"/>
-		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
+		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.8" conf="scala-tool->default,optional(default)"/>
+		<dependency org="org.scala-lang" name="scala-library" rev="2.11.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-enhancer" rev="1.1.0" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.1.1" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-ebean_2.11" rev="3.0.0" conf="compile->default(compile)"/>
@@ -46,5 +46,6 @@
 		<dependency org="com.typesafe.play" name="play-java-jdbc_2.11" rev="2.5.9" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-cache_2.11" rev="2.5.9" conf="compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="play-java-ws_2.11" rev="2.5.9" conf="compile->default(compile)"/>
+		<dependency org="com.adrianhurt" name="play-bootstrap_2.11" rev="1.0-P25-B3" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

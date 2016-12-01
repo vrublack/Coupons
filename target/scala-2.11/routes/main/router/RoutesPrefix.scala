@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/Users/Valentin/git/Coupon/Coupon/conf/routes
-// @DATE:Wed Nov 30 21:05:42 EST 2016
+// @DATE:Thu Dec 01 00:30:28 EST 2016
 
 
 package router {

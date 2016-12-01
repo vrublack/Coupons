@@ -120,7 +120,7 @@ Seq[Any](format.raw/*1.57*/("""
 object Index extends Index_Scope0.Index
               /*
                   -- GENERATED --
-                  DATE: Wed Nov 30 20:46:51 EST 2016
+                  DATE: Thu Dec 01 00:30:29 EST 2016
                   SOURCE: /Users/Valentin/git/Coupon/Coupon/app/views/Index.scala.html
                   HASH: bafe414fbdb00c9ac7e8fb53b2302dd18cd78e4f
                   MATRIX: 762->1|912->56|944->63|988->99|1027->101|1063->111|1126->148|1140->154|1206->200|1289->257|1303->263|1373->312|5429->4341|5458->4342|5507->4363|5889->4717|5918->4718|5956->4729|6001->4744
