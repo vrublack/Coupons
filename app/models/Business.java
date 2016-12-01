@@ -15,22 +15,16 @@ public class Business extends Model
 
     private String bname;
 
-    private String bdescription;
-
-    private Integer catid;
-
     /**
      * Hashed password (using PasswordHash class)
      */
     private String password;
 
 
-    public Business(String businessId, String name, String description, Integer categoryId, String passwordHash)
+    public Business(String email, String name, String passwordHash)
     {
-        this.bemail = businessId;
+        this.bemail = email;
         this.bname = name;
-        this.bdescription = description;
-        this.catid = categoryId;
         this.password = passwordHash;
     }
 }

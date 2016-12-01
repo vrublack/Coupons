@@ -3,7 +3,11 @@
 @import bootstrap3._
 
 @MainPage(page, isLoggedIn, userInfo) {
-   <div class="container">
-     @loginform(routes.Application.postLogin(), loginForm("email"), loginForm("password"))
-   </div>
+    <div class="container">
+    @loginform(routes.Application.postLogin(), loginForm("email"), loginForm("password"))
+    </div>
+
+    <div>
+        <a href="@routes.Application.businessSignup()">No account yet?</a>
+    </div>
 }
