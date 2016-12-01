@@ -6,8 +6,6 @@
 create table business (
   bemail                        varchar(255) not null,
   bname                         varchar(255),
-  bdescription                  varchar(255),
-  catid                         integer,
   password                      varchar(255),
   constraint pk_business primary key (bemail)
 );

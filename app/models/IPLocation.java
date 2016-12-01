@@ -55,7 +55,7 @@ public class IPLocation
 
         } catch (GeoIp2Exception | IOException e)
         {
-            e.printStackTrace();
+            // e.printStackTrace();
         }
 
         return null;
