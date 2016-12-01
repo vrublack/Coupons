@@ -1,6 +1,6 @@
-2016-11-30 14:00:00,957 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-30 14:00:01,364 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2016-11-30 14:00:03,610 [ERROR] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
+2016-11-30 22:13:37,704 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-30 22:13:37,891 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:13:38,428 [ERROR] from org.jdbcdslog.StatementLogger in ForkJoinPool-1-worker-1 - java.sql.Statement.executeQuery: select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%';
 throws exception: org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
 select id, hash, apply_script, revert_script, state, last_problem from play_evolutions where state like 'applying_%' [42102-192]
 org.h2.jdbc.JdbcSQLException: Table "PLAY_EVOLUTIONS" not found; SQL statement:
@@ -28,9 +28,9 @@ select id, hash, apply_script, revert_script, state, last_problem from play_evol
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:483)
+	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.jdbcdslog.StatementLoggingHandler.invoke(StatementLoggingHandler.java:27)
-	at com.sun.proxy.$Proxy27.executeQuery(Unknown Source)
+	at com.sun.proxy.$Proxy33.executeQuery(Unknown Source)
 	at play.api.db.evolutions.DatabaseEvolutions.executeQuery(EvolutionsApi.scala:305)
 	at play.api.db.evolutions.DatabaseEvolutions.checkEvolutionsState(EvolutionsApi.scala:260)
 	at play.api.db.evolutions.DatabaseEvolutions.databaseEvolutions(EvolutionsApi.scala:126)
@@ -81,16 +81,15 @@ select id, hash, apply_script, revert_script, state, last_problem from play_evol
 	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
 	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:902)
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1689)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1644)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2016-11-30 14:00:03,947 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T19:00:03.941Z
-2016-11-30 14:00:04,505 [ERROR] from application in netty-event-loop-3 - 
+2016-11-30 22:13:38,537 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-12-01T03:13:38.536Z
+2016-11-30 22:13:38,542 [ERROR] from application in netty-event-loop-8 - 
 
-! @728hd4g2n - Internal server error, for (GET) [/] ->
+! @728jppei6 - Internal server error, for (GET) [/] ->
  
 play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
 	at play.api.db.evolutions.ApplicationEvolutions$$anonfun$play$api$db$evolutions$ApplicationEvolutions$$runEvolutions$1.apply$mcV$sp(ApplicationEvolutions.scala:77)
@@ -137,15 +136,47 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:121)
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24)
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24)
-	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1423)
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402)
 	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
-	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:902)
-	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1689)
-	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1644)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
 	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
-2016-11-30 14:00:10,308 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Stopping application at 2016-11-30T19:00:10.308Z after 7s.
-2016-11-30 14:00:10,317 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
-2016-11-30 14:00:10,504 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
-2016-11-30 14:00:10,509 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
-2016-11-30 14:00:10,601 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-11-30T19:00:10.601Z
-2016-11-30 14:00:10,922 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-30 22:13:42,306 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Stopping application at 2016-12-01T03:13:42.306Z after 4s.
+2016-11-30 22:13:42,313 [INFO] from application in ForkJoinPool-1-worker-1 - Shutting down connection pool.
+2016-11-30 22:13:42,500 [INFO] from application in ForkJoinPool-1-worker-1 - Creating Pool for datasource 'default'
+2016-11-30 22:13:42,503 [INFO] from play.api.db.DefaultDBApi in ForkJoinPool-1-worker-1 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:13:42,571 [INFO] from application in ForkJoinPool-1-worker-1 - ApplicationTimer demo: Starting application at 2016-12-01T03:13:42.571Z
+2016-11-30 22:13:43,085 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-11-30 22:14:05,985 [WARN] from play in application-akka.actor.default-dispatcher-7 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:14:25,074 [WARN] from play in application-akka.actor.default-dispatcher-8 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:14:26,300 [WARN] from play in application-akka.actor.default-dispatcher-10 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:14:26,841 [WARN] from play in application-akka.actor.default-dispatcher-5 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:14:27,134 [WARN] from play in application-akka.actor.default-dispatcher-11 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:14:27,334 [WARN] from play in application-akka.actor.default-dispatcher-3 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:16:25,646 [WARN] from play in application-akka.actor.default-dispatcher-5 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:16:45,168 [WARN] from play in application-akka.actor.default-dispatcher-15 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:16:45,921 [WARN] from play in application-akka.actor.default-dispatcher-15 - You are using status code '400' with flashing, which should only be used with a redirect status!
+2016-11-30 22:22:23,890 [INFO] from application in application-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Stopping application at 2016-12-01T03:22:23.890Z after 521s.
+2016-11-30 22:22:23,892 [INFO] from application in application-akka.actor.default-dispatcher-15 - Shutting down connection pool.
+2016-11-30 22:22:24,321 [INFO] from application in application-akka.actor.default-dispatcher-15 - Creating Pool for datasource 'default'
+2016-11-30 22:22:24,324 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-15 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:22:24,375 [INFO] from application in application-akka.actor.default-dispatcher-15 - ApplicationTimer demo: Starting application at 2016-12-01T03:22:24.375Z
+2016-11-30 22:22:24,466 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-15 - Application started (Dev)
+2016-11-30 22:27:41,709 [INFO] from application in application-akka.actor.default-dispatcher-29 - ApplicationTimer demo: Stopping application at 2016-12-01T03:27:41.709Z after 317s.
+2016-11-30 22:27:41,709 [INFO] from application in application-akka.actor.default-dispatcher-29 - Shutting down connection pool.
+2016-11-30 22:27:42,165 [INFO] from application in application-akka.actor.default-dispatcher-29 - Creating Pool for datasource 'default'
+2016-11-30 22:27:42,168 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-29 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:27:42,216 [INFO] from application in application-akka.actor.default-dispatcher-29 - ApplicationTimer demo: Starting application at 2016-12-01T03:27:42.216Z
+2016-11-30 22:27:42,298 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-29 - Application started (Dev)
+2016-11-30 22:28:05,402 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Stopping application at 2016-12-01T03:28:05.402Z after 23s.
+2016-11-30 22:28:05,403 [INFO] from application in application-akka.actor.default-dispatcher-4 - Shutting down connection pool.
+2016-11-30 22:28:05,549 [INFO] from application in application-akka.actor.default-dispatcher-4 - Creating Pool for datasource 'default'
+2016-11-30 22:28:05,551 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-4 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:28:05,599 [INFO] from application in application-akka.actor.default-dispatcher-4 - ApplicationTimer demo: Starting application at 2016-12-01T03:28:05.599Z
+2016-11-30 22:28:05,696 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2016-11-30 22:29:34,540 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Stopping application at 2016-12-01T03:29:34.540Z after 89s.
+2016-11-30 22:29:34,541 [INFO] from application in application-akka.actor.default-dispatcher-2 - Shutting down connection pool.
+2016-11-30 22:29:34,692 [INFO] from application in application-akka.actor.default-dispatcher-2 - Creating Pool for datasource 'default'
+2016-11-30 22:29:34,695 [INFO] from play.api.db.DefaultDBApi in application-akka.actor.default-dispatcher-2 - Database [default] connected at jdbc:h2:mem:play
+2016-11-30 22:29:34,748 [INFO] from application in application-akka.actor.default-dispatcher-2 - ApplicationTimer demo: Starting application at 2016-12-01T03:29:34.748Z
+2016-11-30 22:29:34,819 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)

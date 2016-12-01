@@ -92,4 +92,5 @@ public class Application extends Controller {
   public Result profile() {
     return ok(Profile.render("Profile", Secured.isLoggedIn(ctx()), Secured.getUserInfo(ctx())));
   }
+
 }

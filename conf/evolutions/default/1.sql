@@ -19,7 +19,7 @@ create table category (
 create sequence category_seq;
 
 create table coupon (
-  id                            integer not null,
+  id                            bigint not null,
   name                          varchar(255),
   description                   varchar(255),
   promocode                     varchar(255),

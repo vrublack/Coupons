@@ -2,6 +2,7 @@
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/application.conf,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/application.conf)
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/evolutions,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/evolutions)
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/logback.xml,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/logback.xml)
+[debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/messages,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/messages)
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/routes,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/routes)
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/evolutions/default,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/evolutions/default)
 [debug] 	(/Users/Valentin/git/Coupon/Coupon/conf/evolutions/default/1.sql,/Users/Valentin/git/Coupon/Coupon/target/scala-2.11/classes/evolutions/default/1.sql)

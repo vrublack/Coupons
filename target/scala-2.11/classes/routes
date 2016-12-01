@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                           controllers.Application.index()
+GET     /                           controllers.HomeController.index()
 GET     /login                      controllers.Application.login()
 POST    /login                      controllers.Application.postLogin()
 GET     /profile                    controllers.Application.profile()
@@ -14,3 +15,18 @@ POST    /business_signup            controllers.Application.postBusinessSignup()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+# Computers list (look at the default values for pagination parameters)
+GET     /coupons                  controllers.HomeController.list(p:Int ?= 0, s ?= "name", o ?= "asc", f ?= "")
+
+# Add computer
+GET     /coupons/new                controllers.HomeController.create()
+POST    /coupons                  controllers.HomeController.save()
+
+# Edit existing computer
+GET     /coupons/:id              controllers.HomeController.edit(id:Long)
+POST    /coupons/:id              controllers.HomeController.update(id:Long)
+
+# Delete a computer
+POST    /coupons/:id/delete       controllers.HomeController.delete(id:Long)
+
